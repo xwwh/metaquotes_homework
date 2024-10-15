@@ -1,0 +1,195 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+body {
+    color: var(--neutral);
+    padding: 1rem clamp(1.5rem, 6vw, 3rem);
+    background-color: var(--primary);
+}
+
+main {
+    padding-left: 10rem;
+}
+
+nav {
+    float: left;
+    margin: 0;
+    padding: 0;
+    margin-right: 0.8rem;
+}
+
+nav a {
+    color: #000;
+    padding: 0.5rem 0.5rem;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 500;
+    margin-top: 1rem;
+    border-bottom: 3px solid #000;
+    display: block;
+    padding-bottom: 0.8rem;
+    font-family: sans-serif;
+}
+
+nav a:hover {
+    color:rgb(8 88 88);
+    border-bottom: 3px solid rgb(8 88 88);
+}
+
+
+
+click-counter button {
+    font-weight: 600;
+    border: 2px solid var(--neutral);
+    border-radius: 5px;
+    color: var(--neutral);
+    background-color: var(--secondary);
+    width: 8.5rem;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+    transition: opacity .1s, background-color .1s;
+}
+click-counter button:active {
+    background-color: var(--secondary-light);
+}
+
+@media (min-width: 1000px)  {
+    click-counter button {
+        cursor: pointer;
+    }
+    click-counter button:hover {
+        background-color: var(--secondary-light);
+    }
+    click-counter button:active {
+        opacity: .7;
+    }
+}
+
+.search-container {
+    width: 500px;
+    height: 3rem;
+    margin: 2rem auto;
+    border-style: solid;
+    display: flex;
+    overflow: hidden;
+    border-radius: .375rem;
+    border-width: 1px;
+    border-color: rgb(8 88 88);
+    background-color: rgb(255 255 255);
+}
+
+.find-icon-container {
+    display: flex;
+    padding-left: .5rem;
+    align-items: center;
+}
+
+.find-icon {
+    pointer-events: none;
+    fill: currentcolor;
+    height: 1.25rem;
+    width: 1.25rem;
+    color: rgb(156 163 175);
+}
+
+.query {
+    outline: none;
+    border-width: 0;
+    width: 100%;
+    min-width: 8rem;
+    padding-left: 0.5rem;
+    background-color: inherit;
+}
+
+.btn-find {
+    border-width: 0;
+    cursor: pointer;
+    height: 100%;
+    white-space: nowrap;
+    background-color: rgb(8 88 88);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    vertical-align: middle;
+    color: rgb(255 255 255);
+}
+
+table.tbl-org {
+    table-layout:fixed;
+    border-collapse: separate;
+    border-spacing: 0 0;
+    width: 100%;
+    border: 1px solid rgb(211 211 211);
+    margin: 1rem 0;
+}
+
+table.tbl-org tr {
+    padding: 3rem;
+    line-height: 14pt;
+}
+
+table.tbl-org td {
+    padding: 0.3rem;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(242 242 242);
+}
+
+table.tbl-org tr td:first-child {
+    padding-right: 2rem;
+    color: rgb(56 63 75);
+    width: 9rem;
+}
+
+.bad-request {
+    width: 100%;
+    background-color: rgb(224, 156, 156);
+    border: 1px solid rgb(119, 21, 21);
+    border-radius: 0.375rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.not-found {
+    width: 100%;
+    background-color: rgb(219, 219, 219);
+    border: 1px solid rgb(65, 65, 65);
+    border-radius: 0.375rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.request-error {
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(63, 63, 63);
+    color: rgb(255, 255, 88);
+    font-family: monospace, monospace;
+    border-radius: 0.375rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+#find-more {
+    padding: 1rem 1.5rem;
+    margin: 0 50%;
+    width: 500px;
+    border: 1px solid  rgb(255 255 255);
+    cursor: pointer;
+    white-space: nowrap;
+    background-color: rgb(8 88 88);
+    color: rgb(255 255 255);
+    border-radius: 0.375rem;
+}
+
+.hidden {
+    visibility: hidden;
+}
